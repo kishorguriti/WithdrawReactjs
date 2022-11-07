@@ -8,7 +8,7 @@ import './index.css'
 class CashWithdrawal extends Component {
   state = {count: 2000}
 
-  chooseButton = value => {
+  onChooseButton = value => {
     console.log(`button clicked ${value}`)
 
     this.setState(prevState => ({count: prevState.count - value}))
@@ -34,7 +34,7 @@ class CashWithdrawal extends Component {
           </div>
 
           <div className="withdrawSection">
-            <h1 className="withdrawText">Withdraw</h1>
+            <p className="withdrawText">Withdraw</p>
             <p className="withdrawInst">CHOOSE SUM (IN RUPEES)</p>
           </div>
           <div>
@@ -43,7 +43,7 @@ class CashWithdrawal extends Component {
                 <DenominationItem
                   denomination={each}
                   key={each.id}
-                  chooseButton={this.chooseButton}
+                  chooseButton={this.onChooseButton}
                 />
               ))}
             </ul>

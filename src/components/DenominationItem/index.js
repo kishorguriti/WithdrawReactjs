@@ -7,13 +7,13 @@ const DenominationItem = props => {
 
   const {value} = denomination
 
-  onclick = () => {
+  const onSelect = () => {
     chooseButton(value)
   }
 
   return (
     <li className="litstItem">
-      <button className="cashButton" type="button" onClick={onclick}>
+      <button className="cashButton" type="button" onClick={onSelect}>
         {value}
       </button>
     </li>
